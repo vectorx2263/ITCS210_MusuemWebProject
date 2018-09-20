@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    min-height: 80px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2em;
+}
+
+.mynav-link {
+    color: #FFFFFF;
+    text-decoration: none !important;
+}
+
+.mynav-link:hover {
+    color: #CC0000 !important;
+}
+
+.slider {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.slider-items-1 {
+    color: #FFFFFF;
+    padding-top: 40vh;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.my-logo {
+    max-height: 80px;
+}
+
+.nav-light {
+    background:rgba(255,255,255,0.8) !important;
+}
+
+.nav-trans {
+    transition: background-color .2s ease-in-out;
+}
+
+.quick-access {
+    background-color: white;
+}
+
+.page-footer {
+    color:white;
+}
+
+.deep-purple {
+    color: red;
+}
