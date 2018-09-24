@@ -1,6 +1,7 @@
 body {
     background-color: black;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -50,14 +51,56 @@ body {
     transition: background-color .2s ease-in-out;
 }
 
-.quick-access {
-    background-color: white;
-}
-
 .page-footer {
     color:white;
 }
 
-.deep-purple {
-    background-color: #7c4dff!important;
+.deep-red {
+    background-color: #b62a25 !important;
+}
+
+.quick-access-items {
+    color: white;
+    min-height: 200px;
+    vertical-align: middle;
+    padding: 2%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.quick-access .quick-access-items.row-1:nth-child(1) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/akha.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 2s;
+    -moz-transition: 2s;
+    -webkit-transition: 2s;
+}
+
+.quick-access .quick-access-items.row-1:nth-child(1):hover {
+    background-color: #006;
+    transition: 2s;
+    -moz-transition: 2s;
+    -webkit-transition: 2s;
+}
+
+.quick-access-items button {
+    margin-top: 20%;
+}
+
+.quick-access .quick-access-items.row-1:nth-child(2) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/Dara-ang.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
 }
