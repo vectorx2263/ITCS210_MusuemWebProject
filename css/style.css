@@ -67,6 +67,10 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.quick-access-items button {
+    margin-top: 20%;
+}
+
 .quick-access .quick-access-items.row-1:nth-child(1) {
     background:
     linear-gradient(
@@ -77,20 +81,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: 2s;
-    -moz-transition: 2s;
-    -webkit-transition: 2s;
-}
-
-.quick-access .quick-access-items.row-1:nth-child(1):hover {
-    background-color: #006;
-    transition: 2s;
-    -moz-transition: 2s;
-    -webkit-transition: 2s;
-}
-
-.quick-access-items button {
-    margin-top: 20%;
 }
 
 .quick-access .quick-access-items.row-1:nth-child(2) {
@@ -103,4 +93,100 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
+}
+
+.quick-access .quick-access-items.row-1:nth-child(3) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/hmong.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.quick-access .quick-access-items.row-1:nth-child(4) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/Kachin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+}
+
+.quick-access .quick-access-items.row-1:nth-child(5) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/Karen.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+}
+
+.quick-access .quick-access-items.row-2:nth-child(1) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/Lahu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+}
+
+.quick-access .quick-access-items.row-2:nth-child(2) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/lisu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+}
+
+.quick-access .quick-access-items.row-2:nth-child(3) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/Yao.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+}
+
+.quick-access .quick-access-items.row-2:nth-child(4) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/Moken.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+}
+
+.quick-access .quick-access-items.row-2:nth-child(5) {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/lawa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
 }
