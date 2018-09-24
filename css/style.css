@@ -1,7 +1,6 @@
 body {
     background-color: black;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
 }
 
 .navbar {
@@ -20,15 +19,10 @@ body {
 }
 
 .slider {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/bg.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
 }
@@ -43,8 +37,12 @@ body {
     max-height: 80px;
 }
 
+.navbar-toggler {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
 .nav-light {
-    background:rgba(255,255,255,0.8) !important;
+    background: rgba(255, 255, 255, 0.8) !important;
 }
 
 .nav-trans {
@@ -52,11 +50,57 @@ body {
 }
 
 .page-footer {
-    color:white;
+    color: white;
 }
 
 .deep-red {
     background-color: #b62a25 !important;
+}
+
+@media screen and (min-width: 992px) {
+    .dropdown .dropdown-menu {
+        -webkit-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+        -moz-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+        -ms-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+        -o-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+        transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+        max-height: 0;
+        display: block;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .dropdown:hover>.dropdown-menu {
+        -webkit-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+        -moz-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+        -ms-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+        -o-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+        transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.dropdown-menu {
+    background: rgba(72, 8, 8, 0.8);
+    border: none;
+}
+
+.dropdown-item {
+    transition: all .2s ease;
+    min-height: 40px;
+    color: #ffffff;
+    padding-top: 5%;
+}
+
+.dropdown-item:hover {
+    color: #730c0c;
+    background: #ffffff;
+}
+
+.dropdown-toggle::after {
+    display: none;
 }
 
 .quick-access-items {
@@ -67,126 +111,76 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.quick-access-items button {
-    margin-top: 20%;
+.quick-access-items a.btn {
+    margin-top: 10%;
 }
 
 .quick-access .quick-access-items.row-1:nth-child(1) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/akha.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/akha.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .quick-access .quick-access-items.row-1:nth-child(2) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/Dara-ang.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Dara-ang.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 }
 
 .quick-access .quick-access-items.row-1:nth-child(3) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/hmong.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hmong.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 }
 
 .quick-access .quick-access-items.row-1:nth-child(4) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/Kachin.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Kachin.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top; 
+    background-position: top;
 }
 
 .quick-access .quick-access-items.row-1:nth-child(5) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/Karen.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Karen.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top; 
+    background-position: top;
 }
 
 .quick-access .quick-access-items.row-2:nth-child(1) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/Lahu.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Lahu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top; 
+    background-position: top;
 }
 
 .quick-access .quick-access-items.row-2:nth-child(2) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/lisu.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/lisu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top; 
+    background-position: top;
 }
 
 .quick-access .quick-access-items.row-2:nth-child(3) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/Yao.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Yao.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top; 
+    background-position: top;
 }
 
 .quick-access .quick-access-items.row-2:nth-child(4) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/Moken.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Moken.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top; 
+    background-position: top;
 }
 
 .quick-access .quick-access-items.row-2:nth-child(5) {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/lawa.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/lawa.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top; 
+    background-position: top;
 }
