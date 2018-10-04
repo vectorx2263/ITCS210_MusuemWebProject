@@ -87,6 +87,12 @@ body {
     border: none;
 }
 
+@media screen and (max-width: 992px) {
+.dropdown-menu.show {
+    margin-bottom: 30vh;
+}
+}
+
 .dropdown-item {
     transition: all .2s ease;
     min-height: 40px;
@@ -183,4 +189,27 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+}
+
+.header-content {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/akha.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 400px;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    line-height: 30%;
+    color:white;
+}
+
+.header-content .container h1 {
+    font-size: 8em;
+    line-height: 75%;
+}
+
+.content {
+    color:white;
 }
