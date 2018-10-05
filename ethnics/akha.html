@@ -59,11 +59,82 @@
     <section class="content">
         <div class="container">
             <div class="row">
-                <div class="col-8">
-                    this is 8
+                <div class="col-sm-12 col-md-8 col-content">
+                    <div class="card">
+                        <div class="card-header ethnics-header">Akha or Egaw
+                            <div class="size-changer"><i class="fas fa-font"></i> <button type="button" class="btn btn-light btn-sm"
+                                    id="decFont">-</button> <button type="button" class="btn btn-light btn-sm" id="incFont">+</button></div>
+                        </div>
+                        <div class="card-body" id="card-content">
+                            <p class="card-text">The Akha or Egaw are located primarily in Chiang Rai and Chiang Mai
+                                provinces. The most important costume part of Akha is headdress. Akha use a cotton for
+                                weaving and mostly dye a navy blue color.</p>
+                            <div class="ethnics-title mb-3">
+                                <h5><i class="fas fa-angle-right"></i> Women</h5>
+                            </div>
+                            <div class="row">
+                                <img src="../img/akha/women.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3">
+                            </div>
+                            <p class="card-text">Akha women look wonderful and beautiful when dressing fully. Akha
+                                women in Thailand has 3 style for dressing.</p>
+                            <ol>
+                                <li>UloAkha - wear a sharp hat</li>
+                                <li>LomueAka - wear a flat hat</li>
+                                <li>PhameeAkha - wear a flat hat but have more detail</li>
+                            </ol>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <figure class="figure">
+                                        <img src="../img/akha/ulo.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3">
+                                        <figcaption class="figure-caption text-center">UloAkha</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <figure class="figure">
+                                        <img src="../img/akha/Lomue.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3">
+                                        <figcaption class="figure-caption text-center">LomueAka</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <figure class="figure">
+                                        <img src="../img/akha/phamee.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3">
+                                        <figcaption class="figure-caption text-center">PhameeAkha</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <p>The basic costume of an Akha woman consists of</p>
+                            <ul>
+                                <li>a jacket</li>
+                                <li>a headdress</li>
+                                <li>a short skirt</li>
+                                <li>a sash</li>
+                                <li>ornate leggings</li>
+                            </ul>
+                            <p>The back and the sleeves of the jacket are decorated with ornamentation, satin stitches
+                                of bright colours, seeds, silver buttons, coins, beads, shells or tassels depending on
+                                the sub-group of Akha.</p>
+                            <div class="ethnics-title mb-3">
+                                <h5><i class="fas fa-angle-right"></i> Men</h5>
+                            </div>
+                            <div class="row">
+                                    <img src="../img/akha/men.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3" style="max-height: 400px;">
+                                </div>
+                            <p class="card-text">The cloth is not beautiful as in women but it has a wondrous. Akha man
+                                usually wear a jacket that decorated by many colors, a short pant made from a cotton
+                                and a hat made from a massive clothes which roll up to the end of the hat and decorated
+                                by a red tassel</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-4 col-sm-12">
-                    this is 4
+                <div class="col-sm-12 col-md-4 col-content">
+                    <div class="card text-white bg-dark">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dark card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -237,6 +308,36 @@
         crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            function getSize() {
+                size = $("#card-content").css("font-size");
+                size = parseInt(size, 10);
+                console.log(size);
+                return size;
+            }
+
+            //get inital font size
+            var csize = getSize();
+
+            $("#decFont").click(function () {
+                if (csize < 16) {
+                    csize = csize;
+                } else {
+                    csize -= 2;
+                }
+                $("#card-content").css("font-size", csize + "px");
+            });
+            $("#incFont").click(function () {
+                if (csize > 36) {
+                    csize = csize;
+                } else {
+                    csize += 2;
+                }
+                $("#card-content").css("font-size", csize + "px");
+            });
+        });
+    </script>
 </body>
 
 </html>
