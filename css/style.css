@@ -255,3 +255,12 @@ body {
     float: right;
     font-size: 0.5em;
 }
+
+.footer-menu {
+    text-indent: 0px;
+    list-style: none;
+}
+
+.footer-menu li {
+    text-indent: 0px;
+}
