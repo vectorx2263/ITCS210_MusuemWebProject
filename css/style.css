@@ -88,9 +88,9 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-.dropdown-menu.show {
-    margin-bottom: 30vh;
-}
+    .dropdown-menu.show {
+        margin-bottom: 30vh;
+    }
 }
 
 .dropdown-item {
@@ -192,21 +192,16 @@ body {
 }
 
 .header-content {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/akha.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     min-height: 400px;
     height: 35vh;
     display: flex;
     align-items: center;
     line-height: 30%;
-    color:white;
+    color: white;
 }
 
 .header-content .container h1 {
-    font-size: 8em;
+    font-size: 4em;
     line-height: 75%;
 }
 
@@ -219,7 +214,6 @@ body {
     .col-content {
         padding: 0px !important;
     }
-
     .content {
         padding: 0px !important;
     }
@@ -259,8 +253,21 @@ body {
 .footer-menu {
     text-indent: 0px;
     list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.footer-menu li a {
+    text-indent: 0px;
+    padding-left: 5px;
+    margin: 0px;
 }
 
 .footer-menu li {
-    text-indent: 0px;
+    margin: 0px;
+}
+
+.list-group-item.active {
+    background-color: #48120e;
+    border: 0px;
 }
