@@ -228,6 +228,11 @@ body {
 
 .card-text {
     text-indent: 5%;
+    font-family: 'Roboto Slab', sans-serif !important;
+}
+
+.card-list {
+    font-family: 'Roboto Slab', sans-serif !important;
 }
 
 .card {
