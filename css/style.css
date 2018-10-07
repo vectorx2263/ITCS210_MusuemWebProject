@@ -276,3 +276,24 @@ body {
     background-color: #48120e;
     border: 0px;
 }
+
+.boxcontact {
+    padding: 40px;
+    border: 1px white;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.textcontact {
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 1.3em;
+}
+
+.contact-us-container {
+    padding-top: 20vh;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
