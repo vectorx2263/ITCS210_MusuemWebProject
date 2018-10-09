@@ -74,18 +74,26 @@
             <div class="row">
                 <div class="col-sm-12 col-md-8 col-content">
                     <div class="card">
-                        <div class="card-header ethnics-header">Dara-ang or Palong
+                        <div class="card-header ethnics-header">Dara-ang or Palong <button type="button" class="btn btn-light btn-sm" id="intro-play"><i class="fas fa-play"></i></button>
                             <div class="size-changer"><i class="fas fa-font"></i> <button type="button" class="btn btn-light btn-sm" id="decFont">-</button> <button type="button" class="btn btn-light btn-sm" id="incFont">+</button></div>
                         </div>
                         <div class="card-body" id="card-content">
+                            <audio id="intro">
+                                <source src="../audio/Dara_intro.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
                             <p class="card-text">The traditional dress of the Dara-Ang tribe is remarkable because of color and design. The dress of Dara-Ang tribe emphasizes three colors. There are red, white and black. In Dara-Ang language, red is called “Hreng” , white
                                 is called “Lui” and black is called “Wong”.</p>
                             <div class="ethnics-title mb-3">
-                                <h5><i class="fas fa-angle-right"></i> Women</h5>
+                                <h5><i class="fas fa-angle-right"></i> Women <button type="button" class="btn btn-light btn-sm" id="women-play"><i class="fas fa-play"></i></button></h5>
                             </div>
                             <div class="row">
                                 <img src="../img/palong/women.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3" style="max-height: 300px;">
                             </div>
+                            <audio id="women">
+                                <source src="../audio/Dara_women.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
                             <p class="card-text">The basic of women’s customer consists of</p>
                             <ul class="card-list">
                                 <li>Long red dress</li>
@@ -93,15 +101,19 @@
                                 <li>Large silver waistbands</li>
                             </ul>
                             <div class="ethnics-title mb-3">
-                                <h5><i class="fas fa-angle-right"></i> Men</h5>
+                                <h5><i class="fas fa-angle-right"></i> Men <button type="button" class="btn btn-light btn-sm" id="men-play"><i class="fas fa-play"></i></button></h5>
                             </div>
+                            <audio id="men">
+                                <source src="../audio/Dara_men.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
                             <p class="card-text">Men’s clothing is rather simple. The basic of men’s customer consists of</p>
                             <ul class="card-list">
                                 <li>A long sleeved shirt</li>
                                 <li>Pants</li>
                                 <li>Bandanna</li>
                             </ul>
-                            <p class="card-text">Chosing color of the cloths depends on their oppunity. If they are working they will dress dark clothes, but if they are having festival they will dress with colorful clothes</p>
+                            <p class="card-text">Chosing color of the cloths depends on their oppunity. If they are working they will dress dark clothes, but if they are having festival they will dress with colorful clothes.</p>
                         </div>
                     </div>
                 </div>
@@ -288,6 +300,55 @@
                     csize += 2;
                 }
                 $("#card-content").css("font-size", csize + "px");
+            });
+
+            var intro_player = document.getElementById("intro");
+            var women_player = document.getElementById("women");
+            var men_player = document.getElementById("men");
+
+            $('#intro-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    intro_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    intro_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            $('#women-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    women_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    women_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            $('#men-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    men_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    men_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            intro_player.addEventListener("ended", function() {
+                intro_player.currentTime = 0;
+                $('#intro-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+            });
+
+            women_player.addEventListener("ended", function() {
+                women_player.currentTime = 0;
+                $('#women-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+            });
+
+            men_player.addEventListener("ended", function() {
+                men_player.currentTime = 0;
+                $('#men-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
             });
         });
     </script>

@@ -74,23 +74,35 @@
             <div class="row">
                 <div class="col-sm-12 col-md-8 col-content">
                     <div class="card">
-                        <div class="card-header ethnics-header">Lahu
+                        <div class="card-header ethnics-header">Lahu <button type="button" class="btn btn-light btn-sm" id="intro-play"><i class="fas fa-play"></i></button>
                             <div class="size-changer"><i class="fas fa-font"></i> <button type="button" class="btn btn-light btn-sm" id="decFont">-</button> <button type="button" class="btn btn-light btn-sm" id="incFont">+</button></div>
                         </div>
                         <div class="card-body" id="card-content">
+                            <audio id="intro">
+                                        <source src="../audio/Lahu_intro.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
                             <p class="card-text">In the past, a few Lahu people weave their own clothes but nowadays, weaving is only used for little accessories such as bag or satchel-sash.
                             </p>
                             <div class="ethnics-title mb-3">
-                                <h5><i class="fas fa-angle-right"></i> Women</h5>
+                                <h5><i class="fas fa-angle-right"></i> Women <button type="button" class="btn btn-light btn-sm" id="women-play"><i class="fas fa-play"></i></button></h5>
                             </div>
+                            <audio id="women">
+                                    <source src="../audio/Lahu_women.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
                             <div class="row">
                                 <img src="../img/lahu/woman.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3" style="max-height: 300px;">
                             </div>
                             <p class="card-text">Lahu women wear long-sleeve shirt and ankle-length skirt. The clothes are decorated with colorful stripes and small aluminium balls weaving with the shirt. Moreover, the shirt has beautiful patterns in various styles which
                                 stick in the front and back.</p>
                             <div class="ethnics-title mb-3">
-                                <h5><i class="fas fa-angle-right"></i> Men</h5>
+                                <h5><i class="fas fa-angle-right"></i> Men <button type="button" class="btn btn-light btn-sm" id="men-play"><i class="fas fa-play"></i></button></h5>
                             </div>
+                            <audio id="men">
+                                    <source src="../audio/Lahu_men.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
                             <div class="row">
                                 <img src="../img/lahu/man.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3" style="max-height: 300px;">
                             </div>
@@ -282,6 +294,56 @@
                 }
                 $("#card-content").css("font-size", csize + "px");
             });
+
+            var intro_player = document.getElementById("intro");
+            var women_player = document.getElementById("women");
+            var men_player = document.getElementById("men");
+
+            $('#intro-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    intro_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    intro_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            $('#women-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    women_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    women_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            $('#men-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    men_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    men_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            intro_player.addEventListener("ended", function() {
+                intro_player.currentTime = 0;
+                $('#intro-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+            });
+
+            women_player.addEventListener("ended", function() {
+                women_player.currentTime = 0;
+                $('#women-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+            });
+
+            men_player.addEventListener("ended", function() {
+                men_player.currentTime = 0;
+                $('#men-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+            });
+
         });
     </script>
 </body>
