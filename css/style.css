@@ -345,8 +345,14 @@ body {
 
 @media (max-width: 767px) {
     .footer-item {
+        transition: none;
         padding: 0px;
         text-align: center;
+    }
+
+    .footer-item:hover {
+        color: inherit;
+        background: inherit;
     }
 }
 
