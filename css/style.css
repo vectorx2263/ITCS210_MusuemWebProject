@@ -9,6 +9,42 @@ body {
     font-size: 1.2em;
 }
 
+@media(max-width:768px) {
+    .navbar .collapse.show,
+    .navbar .collapsing {
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        min-height: 100vh;
+    }
+    .navbar .navbar-nav>.nav-item {
+        float: none;
+        clear: both;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav.navbar-nav {
+        margin-top: 10vh;
+        text-align: center!important;
+    }
+}
+
+.closenav {
+    margin: 1rem;
+}
+
+@media(min-width: 768px) {
+    .mynav-link {
+        color: #FFFFFF;
+        text-decoration: none !important;
+        margin-right: 3rem;
+    }
+}
+
 .mynav-link {
     color: #FFFFFF;
     text-decoration: none !important;
