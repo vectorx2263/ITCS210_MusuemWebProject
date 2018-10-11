@@ -74,10 +74,14 @@
             <div class="row">
                 <div class="col-sm-12 col-md-8 col-content">
                     <div class="card">
-                        <div class="card-header ethnics-header">Moken
+                        <div class="card-header ethnics-header">Moken <button type="button" class="btn btn-light btn-sm" id="intro-play"><i class="fas fa-play"></i></button>
                             <div class="size-changer"><i class="fas fa-font"></i> <button type="button" class="btn btn-light btn-sm" id="decFont">-</button> <button type="button" class="btn btn-light btn-sm" id="incFont">+</button></div>
                         </div>
                         <div class="card-body" id="card-content">
+                                <audio id="intro">
+                                        <source src="../audio/Moken_intro.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
                             <p class="card-text">Long time ago, Moken wore sarong at their waist level. Nowadays, the Moken women wear their sarongs up to their chest levels. Alternatively, unmarried women can wear sarongs at the waist with their bras on and married women
                                 who breastfeed can go without bras. The Moken do not make their own traditional clothes. They purchase their sarongs through trading.</p>
                         </div>
@@ -266,6 +270,21 @@
                     csize += 2;
                 }
                 $("#card-content").css("font-size", csize + "px");
+            });
+
+            var intro_player = document.getElementById("intro");
+            $('#intro-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    intro_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    intro_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+            intro_player.addEventListener("ended", function() {
+                intro_player.currentTime = 0;
+                $('#intro-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
             });
         });
     </script>

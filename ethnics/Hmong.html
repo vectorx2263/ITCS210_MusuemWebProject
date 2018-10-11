@@ -79,16 +79,24 @@
                         </div>
                         <div class="card-body" id="card-content">
                             <div class="ethnics-title mb-3">
-                                <h5><i class="fas fa-angle-right"></i> Women</h5>
+                                <h5><i class="fas fa-angle-right"></i> Women <button type="button" class="btn btn-light btn-sm" id="women-play"><i class="fas fa-play"></i></button></h5>
                             </div>
+                            <audio id="women">
+                                    <source src="../audio/Hmong_women.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
                             <div class="row">
                                 <img src="../img/hmong/woman.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3" style="max-height: 300px;">
                             </div>
                             <p class="card-text">The traditional dress for women is most interesting and look heavy with all the different layers. Women usually wear ¾ sleeved wrap around tops that are embroidered at the neckline and sleeves but either choose to wear long
                                 black pants for a more casual look or a pleated dress for a more dressed-up look. The red, pink or green colorful decorated bands with embroidered bands are the additional choice for women.</p>
                             <div class="ethnics-title mb-3">
-                                <h5><i class="fas fa-angle-right"></i> Men</h5>
+                                <h5><i class="fas fa-angle-right"></i> Men <button type="button" class="btn btn-light btn-sm" id="men-play"><i class="fas fa-play"></i></button></h5>
                             </div>
+                            <audio id="men">
+                                    <source src="../audio/Hmong_men.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
                             <div class="row">
                                 <img src="../img/hmong/man.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3" style="max-height: 300px;">
                             </div>
@@ -281,6 +289,39 @@
                     csize += 2;
                 }
                 $("#card-content").css("font-size", csize + "px");
+            });
+
+            var women_player = document.getElementById("women");
+            var men_player = document.getElementById("men");
+
+            $('#women-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    women_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    women_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            $('#men-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    men_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    men_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            women_player.addEventListener("ended", function() {
+                women_player.currentTime = 0;
+                $('#women-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+            });
+
+            men_player.addEventListener("ended", function() {
+                men_player.currentTime = 0;
+                $('#men-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
             });
         });
     </script>

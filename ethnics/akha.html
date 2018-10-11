@@ -74,14 +74,22 @@
             <div class="row">
                 <div class="col-sm-12 col-md-8 col-content">
                     <div class="card">
-                        <div class="card-header ethnics-header">Akha or Egaw
+                        <div class="card-header ethnics-header">Akha or Egaw <button type="button" class="btn btn-light btn-sm" id="intro-play"><i class="fas fa-play"></i></button>
                             <div class="size-changer"><i class="fas fa-font"></i> <button type="button" class="btn btn-light btn-sm" id="decFont">-</button> <button type="button" class="btn btn-light btn-sm" id="incFont">+</button></div>
                         </div>
                         <div class="card-body" id="card-content">
+                                <audio id="intro">
+                                        <source src="../audio/Akha_intro.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
                             <p class="card-text">The Akha or Egaw are located primarily in Chiang Rai and Chiang Mai provinces. The most important costume part of Akha is headdress. Akha use a cotton for weaving and mostly dye a navy blue color.</p>
                             <div class="ethnics-title mb-3">
-                                <h5><i class="fas fa-angle-right"></i> Women</h5>
+                                <h5><i class="fas fa-angle-right"></i> Women <button type="button" class="btn btn-light btn-sm" id="women-play"><i class="fas fa-play"></i></button></h5>
                             </div>
+                            <audio id="women">
+                                    <source src="../audio/Akha_women.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
                             <div class="row">
                                 <img src="../img/akha/women.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3">
                             </div>
@@ -121,8 +129,12 @@
                             </ul>
                             <p class="card-text">The back and the sleeves of the jacket are decorated with ornamentation, satin stitches of bright colours, seeds, silver buttons, coins, beads, shells or tassels depending on the sub-group of Akha.</p>
                             <div class="ethnics-title mb-3">
-                                <h5><i class="fas fa-angle-right"></i> Men</h5>
+                                <h5><i class="fas fa-angle-right"></i> Men <button type="button" class="btn btn-light btn-sm" id="men-play"><i class="fas fa-play"></i></button></h5>
                             </div>
+                            <audio id="men">
+                                    <source src="../audio/Akha_Men.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
                             <div class="row">
                                 <img src="../img/akha/men.jpg" class="img-fluid img-thumbnail mx-auto d-block mb-3" style="max-height: 400px;">
                             </div>
@@ -314,6 +326,55 @@
                     csize += 2;
                 }
                 $("#card-content").css("font-size", csize + "px");
+            });
+
+            var intro_player = document.getElementById("intro");
+            var women_player = document.getElementById("women");
+            var men_player = document.getElementById("men");
+
+            $('#intro-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    intro_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    intro_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            $('#women-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    women_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    women_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            $('#men-play').click(function() {
+                if ($(this).find($(".fas")).hasClass('fa-play')) {
+                    men_player.play();
+                    $(this).find($(".fas")).removeClass('fa-play').addClass('fa-pause');
+                } else if ($(this).find($(".fas")).hasClass('fa-pause')) {
+                    men_player.pause();
+                    $(this).find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+                }
+            });
+
+            intro_player.addEventListener("ended", function() {
+                intro_player.currentTime = 0;
+                $('#intro-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+            });
+
+            women_player.addEventListener("ended", function() {
+                women_player.currentTime = 0;
+                $('#women-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
+            });
+
+            men_player.addEventListener("ended", function() {
+                men_player.currentTime = 0;
+                $('#men-play').find($(".fas")).removeClass('fa-pause').addClass('fa-play');
             });
         });
     </script>

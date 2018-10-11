@@ -90,6 +90,12 @@
         </div>
     </section>
 
+    <section>
+            <div id="map" style="min-height: 50vh;">
+                    My map here
+                </div>
+    </section>
+
     <!-- Footer -->
     <footer class="page-footer font-small unique-color-dark">
 
@@ -228,7 +234,22 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfZuVKF9F2JNRMsOQnfnu4MAvD2ksbW4c&callback=initMap" type="text/javascript"></script>
     <script src="js/main.js"></script>
+
+    <script>
+            function initMap() {
+                var myLatLng = {lat: 13.791149, lng: 100.323182};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 19,
+                    center: myLatLng
+                });
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map
+                });
+            }
+          </script>
 </body>
 
 </html>
